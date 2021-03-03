@@ -1,0 +1,30 @@
+/*
+Theme Name: BarsAthletic
+Theme URI: http://barsathletic.com
+Author: Georgi Ginev
+Author URI: http://gginev.com
+Description: Theme for a fitness website featuring videos, posts
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, grey
+Text Domain: barsathletic
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+/* Vendors */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Abstract */
+@import 'abstract/variables';
+
+/* Base */
+@import 'base/reset';
+@import 'base/typography';
+
+/* Layouts */
+
+/* Themes */
+
+/* Components */
