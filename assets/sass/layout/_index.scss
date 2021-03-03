@@ -1,0 +1,37 @@
+.index_welcome {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $secondary-background-color;
+
+  .video {
+    height: 100%;
+
+    video {
+      height: 100%;
+      position: relative;
+      z-index: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      left: 0;
+      top: 0;
+      background-image: linear-gradient(to right, $secondary-background-color, rgba($secondary-background-color, .0));
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      right: 0;
+      top: 0;
+      background-image: linear-gradient(to left, $secondary-background-color, rgba($secondary-background-color, .0));
+      z-index: 1;
+    }
+  }
+}

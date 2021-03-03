@@ -4,6 +4,8 @@ let scssOptions = {
     processCssUrls: false
 }
 
+mix.setPublicPath('./').copy('assets/images', 'public/images', false);
+
 mix.setPublicPath('./')
     .js("assets/js/app.js", "public/js/app.js")
-    .sass('assets/scss/app.scss', "public/css/app.css").options(scssOptions).version();
+    .sass('assets/sass/app.scss', "public/css/app.css").options(scssOptions).version();
