@@ -2,13 +2,18 @@
   height: 100vh;
   overflow: hidden;
   background-color: $secondary-background-color;
+  padding: 12px;
 
   .video {
-    height: 100%;
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 
     video {
-      height: 100%;
-      position: relative;
+      height: auto;
+      width: 100%;
       z-index: 0;
     }
 

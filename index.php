@@ -15,16 +15,8 @@
  */
 
 get_header();
-?>
-    <section class="index_welcome">
-        <?php if(get_home_video()) { ?>
-        <div class="video">
-            <video autoplay muted loop>
-                <source src="<?php echo get_home_video(); ?>" type="video/mp4">
-            </video>
-        </div>
-        <?php } ?>
-    </section>
-<?php
+
+include_once('views/app.php');
+
 get_footer();
 ?>
