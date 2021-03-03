@@ -1,0 +1,36 @@
+.ba-btn {
+  border-radius: $primary-border-radius;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color $primary-transition ease-in-out, background-color $primary-transition ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.ba-btn-sm {
+  height: 34px;
+  margin: 12px;
+}
+
+.ba-btn-lg {
+  height: 57px;
+  margin: 16px;
+}
+
+.ba-btn-primary {
+  @extend .ba-btn;
+  @extend .ba-btn-sm;
+
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+
+  &:hover {
+    background-color: rgba($primary-background-color, .8);
+    color: $primary-text-color;
+  }
+}

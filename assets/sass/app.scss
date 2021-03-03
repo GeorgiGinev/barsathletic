@@ -23,10 +23,12 @@ This theme, like WordPress, is licensed under the GPL.
 @import 'base/reset';
 @import 'base/typography';
 
+/* Themes */
+@import "themes/animations";
+
 /* Layouts */
 @import "layout/index";
 @import "layout/nav";
 
-/* Themes */
-
 /* Components */
+@import "components/button";

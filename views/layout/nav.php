@@ -6,19 +6,12 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
+        <?php wp_nav_menu( array(
+            'theme_location' => 'header-menu',
+            'menu_id' => 'header-menu') );?>
+        <div class="d-flex align-items-center">
+            <a class="ba-btn-primary">Sign Up</a>
+            <a class="ba-btn-primary">Sign In</a>
+        </div>
     </div>
 </nav>

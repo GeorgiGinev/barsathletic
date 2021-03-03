@@ -4,6 +4,62 @@
     z-index: 2;
   }
 }
+
 .navbar {
-  background-color: green;
+  background-color: $secondary-background-color;
+  color: $primary-text-color;
+
+  .navbar-collapse {
+    justify-content: flex-end;
+
+    #header-menu {
+      @extend .navbar-nav;
+      margin-right: 18px;
+      flex-direction: row;
+
+      li {
+        @extend .nav-item;
+        transition: color $primary-transition ease-in-out;
+        position: relative;
+
+        a {
+          @extend .nav-link;
+
+          color: inherit;
+          padding: 0 0.625rem;
+        }
+
+        &.active {
+          color: rgba($primary-background-color, .8);
+
+          &::before {
+            opacity: 1;
+            transform: translate(-50%, 0);
+          }
+        }
+
+        &:hover {
+          color: rgba($primary-background-color, .8);
+
+          &::before {
+            opacity: 1;
+            transform: translate(-50%, 0);
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -8px;
+          left: 50%;
+          transform: translate(-50%, -20px);
+          width: 18px;
+          height: 8px;
+          background-image: url("../images/icons/dumbel.svg");
+          opacity: 0;
+          transition: opacity $secondary-transition ease-in-out, transform $secondary-transition ease-in-out;
+        }
+      }
+    }
+  }
 }
