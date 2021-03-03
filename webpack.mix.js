@@ -5,6 +5,7 @@ let scssOptions = {
 }
 
 mix.setPublicPath('./').copy('assets/images', 'public/images', false);
+mix.setPublicPath('./').copy('assets/webfonts', 'public/webfonts', false);
 
 mix.setPublicPath('./')
     .js("assets/js/app.js", "public/js/app.js")

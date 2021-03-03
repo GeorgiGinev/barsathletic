@@ -16,7 +16,9 @@
                 <div class="join">
                     <a href="<?php echo get_home_button_link(); ?>"
                        class="ba-btn-primary ba-btn-lg ba-btn-full-radius"
-                       title="<?php echo get_home_button_label(); ?>"><?php echo get_home_button_label(); ?></a>
+                       title="<?php echo get_home_button_label(); ?>">
+                        <?php echo get_home_button_label(); ?>
+                    </a>
                 </div>
             <?php } ?>
         </div>
