@@ -1,42 +1,86 @@
 .index_welcome {
+  height: auto;
+
+  .content {
+    margin-top: 55px;
+    animation: $tertiary-transition fadeIn forwards;
+
+    .title {
+      font-size: 80px;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      color: $primary-text-color;
+      position: relative;
+      margin-bottom: 26px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 100%;
+        max-width: 400px;
+        background-color: $primary-text-color;
+      }
+    }
+
+    .sub-title {
+      font-size: 24px;
+      color: $secondary-text-color;
+      font-weight: 500;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    .join {
+      margin-top: 55px;
+      font-size: 21px;
+      font-weight: 500;
+
+      & > * {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.video {
   height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: $secondary-transition fadeIn forwards;
+  z-index: -1;
   overflow: hidden;
-  background-color: $secondary-background-color;
-  padding: 12px;
 
-  .video {
+  video {
+    max-width: 100%;
     height: auto;
-    width: 100%;
-    top: 0;
-    left: 0;
+  }
+
+  &::before {
+    content: '';
     position: absolute;
+    height: 100vh;
+    width: 50%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, $secondary-background-color, rgba($secondary-background-color, .0));
+    z-index: 0;
+  }
 
-    video {
-      height: auto;
-      width: 100%;
-      z-index: 0;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 50%;
-      left: 0;
-      top: 0;
-      background-image: linear-gradient(to right, $secondary-background-color, rgba($secondary-background-color, .0));
-      z-index: 1;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 50%;
-      right: 0;
-      top: 0;
-      background-image: linear-gradient(to left, $secondary-background-color, rgba($secondary-background-color, .0));
-      z-index: 1;
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, $secondary-background-color, rgba($secondary-background-color, .0));
+    z-index: 0;
   }
 }

@@ -6,6 +6,7 @@
   justify-content: center;
   cursor: pointer;
   transition: color $primary-transition ease-in-out, background-color $primary-transition ease-in-out;
+  width: max-content;
 
   &:hover {
     text-decoration: none;
@@ -20,6 +21,10 @@
 .ba-btn-lg {
   height: 57px;
   margin: 16px;
+}
+
+.ba-btn-full-radius {
+  border-radius: 25px;
 }
 
 .ba-btn-primary {

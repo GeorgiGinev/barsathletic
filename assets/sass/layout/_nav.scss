@@ -1,13 +1,25 @@
-.index_welcome {
-  .navbar {
-    background-color: transparent;
-    z-index: 2;
-  }
-}
-
 .navbar {
   background-color: $secondary-background-color;
   color: $primary-text-color;
+  animation: $tertiary-transition smallSlideDownWithFade forwards;
+  z-index: 1;
+
+  &.no-fill {
+    background-color: transparent;
+  }
+
+  .navbar-brand {
+    width: 378px;
+    height: 87px;
+    padding: 0;
+
+    img {
+      max-width: 378px;
+      max-height: 87px;
+      margin: auto;
+      display: block;
+    }
+  }
 
   .navbar-collapse {
     justify-content: flex-end;

@@ -1,5 +1,5 @@
 <?php
-function ba_home_customize($wp_home_customize) {
+function ba_home_video($wp_home_customize) {
     $wp_home_customize->add_setting('home_video', array(
         'type' => 'theme_mod',
         'capability' => 'edit_theme_options',
@@ -23,5 +23,5 @@ function get_home_video() {
     return wp_get_attachment_url($id);
 }
 
-add_action('customize_register', 'ba_home_customize');
+add_action('customize_register', 'ba_home_video');
 

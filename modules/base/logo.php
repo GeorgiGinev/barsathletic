@@ -11,7 +11,9 @@ function ba_logo($customizer)
         'section' => 'title_tagline',
         'label' => 'Logo',
         'description' => 'Upload logo image',
-        'mime_type' => 'image'
+        'mime_type' => 'image',
+        'width' => 378,
+        'height' => 85
     )));
 }
 

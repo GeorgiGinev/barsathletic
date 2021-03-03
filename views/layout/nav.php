@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg <?php if (is_front_page()) { ?> no-fill <?php } ?>">
     <a class="navbar-brand" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo get_home_url(); ?>">
       <img src="<?php echo get_site_logo(); ?>" alt="<?php echo get_bloginfo('name'); ?>" />
     </a>
@@ -10,8 +10,8 @@
             'theme_location' => 'header-menu',
             'menu_id' => 'header-menu') );?>
         <div class="d-flex align-items-center">
-            <a class="ba-btn-primary">Sign Up</a>
-            <a class="ba-btn-primary">Sign In</a>
+            <a href="#" class="ba-btn-primary">Sign Up</a>
+            <a href="#" class="ba-btn-primary">Sign In</a>
         </div>
     </div>
 </nav>
