@@ -4,6 +4,7 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
 
 /* Abstract */
 @import 'abstract/variables';
@@ -15,9 +16,9 @@
 /* Themes */
 @import "themes/animations";
 
+/* Components */
+@import "components/button";
+
 /* Layouts */
 @import "layout/index";
 @import "layout/nav";
-
-/* Components */
-@import "components/button";
