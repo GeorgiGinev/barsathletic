@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg <?php if (is_front_page()) { ?> no-fill <?php } ?>" id="headerNav">
+<nav class="navbar navbar-expand-lg <?php if (is_front_page()) {  echo 'no-fill'; } ?>" id="headerNav">
     <a class="navbar-brand" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo get_home_url(); ?>">
         <img src="<?php echo get_site_logo(); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
     </a>

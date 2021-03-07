@@ -18,6 +18,10 @@
     transition: all $primary-transition ease-in-out;
   }
 
+  @media (max-width: 992px) {
+    padding: 0 0.5rem;
+  }
+
   .navbar-toggler {
     &.hamburger {
       z-index: 1001;
@@ -140,6 +144,7 @@
       width: 100%;
       background-color: #ffffff;
       position: fixed;
+      padding: 0 0.5rem;
 
       &.show {
         display: flex;

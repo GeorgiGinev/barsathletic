@@ -7,7 +7,7 @@
     padding: 98px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 
     &.logged {
       height: calc(100vh - 43px);;
@@ -150,10 +150,10 @@
 .video {
   min-height: 568px;
   height: 100vh;
-  max-width: 100%;
+  width: 100%;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  background-color: $secondary-background-color;
   position: absolute;
   animation: $secondary-transition fadeIn forwards;
   z-index: -1;

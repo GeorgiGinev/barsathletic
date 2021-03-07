@@ -17,7 +17,13 @@ $(document).ready(function() {
             var videoContainer = $('<div />', {
                 class: 'video'
             });
+
             var video = $('<video autoplay muted loop/>');
+            if($(window).height() <= $(window).width()) {
+                video.css({'width': '100%', 'height': 'auto'});
+            } else {
+                video.css({'width': 'unset', 'height': '100%'});
+            }
 
             var source = $('<source />', {
                 src: homeVideoUrl,
@@ -34,15 +40,22 @@ $(document).ready(function() {
 // Navigation
 $(document).ready(function() {
     $('#headerNavigation').on('show.bs.collapse', function () {
+        $(this).fadeIn('slow', function() {
+            $(this).addClass('show');
+        });
+
         $(this).prev().addClass('is-active');
     });
 
     $('#headerNavigation').on('hide.bs.collapse', function () {
+        $(this).fadeOut('slow', function() {
+            $(this).removeClass('show');
+        });
         $(this).prev().removeClass('is-active')
     });
 
     $(window).scroll(function() {
-        if($('#wpadminbar')) {
+        if($('#wpadminbar').length) {
             if($(window).scrollTop() >= $('#wpadminbar').height() && !$('#headerNav').hasClass('scroll')) {
                 $('#headerNav').addClass('scroll');
                 return;
@@ -55,12 +68,13 @@ $(document).ready(function() {
             return;
         }
 
-        if(!$('#headerNav').hasClass('scroll')) {
+        if($(window).scrollTop() >= 1 && !$('#headerNav').hasClass('scroll')) {
             $('#headerNav').addClass('scroll');
+
             return;
         }
 
-        if($('#headerNav').hasClass('scroll')) {
+        if($(window).scrollTop() < 1 && $('#headerNav').hasClass('scroll')) {
             $('#headerNav').removeClass('scroll')
         }
     });
