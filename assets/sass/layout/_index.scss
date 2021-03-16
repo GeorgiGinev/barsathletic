@@ -2,6 +2,7 @@
   height: auto;
 
   .content {
+    min-height: 615px;
     height: 100vh;
     animation: $tertiary-transition fadeIn forwards;
     padding: 98px 0;

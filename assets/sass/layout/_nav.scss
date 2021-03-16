@@ -6,6 +6,7 @@
   flex-wrap: unset;
   position: absolute;
   width: 100%;
+  transition: background-color $primary-transition ease-in-out;
 
   &.no-fill {
     background-color: transparent;
@@ -14,8 +15,44 @@
   &.scroll {
     top: 0;
     position: fixed;
-    background-color: rgba($primary-text-color, .4);
-    transition: all $primary-transition ease-in-out;
+    background-color: rgba($primary-background-color, 1);
+
+    .navbar-toggler {
+      &.hamburger {
+        .hamburger-box {
+          .hamburger-inner {
+            background-color: $primary-text-color;
+
+            &::before, &::after {
+              background-color: $primary-text-color;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar-collapse {
+      #header-menu {
+        li {
+          &:hover {
+            color: $tertiary-text-color;
+          }
+
+          &::before {
+            background-image: url("../images/icons/dumbel-contrasted.svg");
+          }
+        }
+      }
+
+      .ba-btn-primary {
+        background-color: $primary-text-color;
+        color: $primary-background-color;
+
+        &:hover {
+          background-color: rgba($primary-text-color, .8);
+        }
+      }
+    }
   }
 
   @media (max-width: 992px) {
@@ -28,9 +65,11 @@
 
       .hamburger-box {
         .hamburger-inner {
+          transition: all $primary-transition ease-in-out;
           background-color: $primary-background-color;
 
           &::before, &::after {
+            transition: all $primary-transition ease-in-out;
             background-color: $primary-background-color;
           }
         }
@@ -105,7 +144,7 @@
         }
 
         &.active {
-          color: rgba($primary-background-color, .8);
+          // color: rgba($primary-background-color, .8);
 
           &::before {
             opacity: 1;
@@ -132,7 +171,9 @@
           height: 8px;
           background-image: url("../images/icons/dumbel.svg");
           opacity: 0;
-          transition: opacity $secondary-transition ease-in-out, transform $secondary-transition ease-in-out;
+          transition: opacity $secondary-transition ease-in-out,
+          transform $secondary-transition ease-in-out,
+          background-image $primary-transition ease-in-out;
         }
       }
     }
@@ -147,7 +188,7 @@
       padding: 0 0.5rem;
 
       &.show {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
       }
 
