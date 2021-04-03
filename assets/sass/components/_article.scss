@@ -6,6 +6,7 @@
   overflow: hidden;
   cursor: pointer;
   display: block;
+  user-select: none;
 
   .article-title {
     vertical-align: middle;
@@ -26,7 +27,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    transition: opacity $secondary-transition ease-in-out;
+    transition: opacity $secondary-transition ease-in-out, filter $secondary-transition ease-in-out;
     display: flex;
     align-items: center;
     z-index: 0;
@@ -99,6 +100,7 @@
   &:hover {
     .article-thumbnail {
       opacity: .4;
+      filter: blur(4px);
     }
 
     .article-title {

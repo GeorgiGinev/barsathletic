@@ -33,8 +33,12 @@
         <h2 class="page-title">Latest programs</h2>
 
         <div class="row">
-            <?php foreach (get_posts(array('numberposts' => 3)) as $article) { ?>
-                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+            <?php foreach (get_posts(array('numberposts' => 3)) as $key=>$article) { ?>
+                <div class="col-12 col-md-6 col-lg-4"
+                    <?php if($key == 0) { ?> data-aos="fade-in" <?php } ?>
+                    <?php if($key == 1) { ?> data-aos="fade-in" <?php } ?>
+                    <?php if($key == 2) { ?> data-aos="fade-in" <?php } ?>
+                >
                     <?php include(__DIR__.'/../components/article-listing.php');?>
                 </div>
             <?php } ?>
