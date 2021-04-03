@@ -1,6 +1,7 @@
 <?php if (!empty($article) && $article->post_status == 'publish') { ?>
-    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($article->id), 'small-thumbnail'); ?>
-    <a class="article-box" title="<?php echo $article->post_title; ?>" href="<?php echo get_permalink($article->id); ?>">
+    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($article->ID), 'small-thumbnail'); ?>
+    <a class="article-box" title="<?php echo $article->post_title; ?>"
+       href="<?php echo get_permalink($article->ID); ?>">
         <?php if (!empty($image)) { ?>
             <span class="article-thumbnail">
                 <span class="thumbnail">
