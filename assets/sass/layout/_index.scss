@@ -11,7 +11,7 @@
     justify-content: space-around;
 
     &.logged {
-      height: calc(100vh - 43px);;
+      height: calc(100vh - 32px);;
     }
 
     .title {
@@ -154,6 +154,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  display: flex;
   background-color: $secondary-background-color;
   position: absolute;
   animation: $secondary-transition fadeIn forwards;

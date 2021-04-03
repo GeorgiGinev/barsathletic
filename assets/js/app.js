@@ -2,12 +2,16 @@ window.Popper = require('popper.js').default;
 require('popper.js');
 require('bootstrap/dist/js/bootstrap');
 require('jquery');
+require('tilt.js/src/tilt.jquery');
 require('es6-promise').polyfill();
 var $ = require('jquery');
 import jquery from 'jquery';
 global.jQuery = jquery;
 global.$ = jquery;
 global.jquery = jquery;
+
+import {lazyLoadingInit} from "./lazy_loading";
+
 
 // Append video on index
 $(document).ready(function() {
@@ -79,3 +83,16 @@ $(document).ready(function() {
         }
     });
 });
+
+// Article tilt effect
+$(document).ready(function() {
+    $('.article-box').tilt({
+        glare: true,
+        maxGlare: .5
+    })
+})
+
+// Lazy loading
+$(document).ready(function() {
+    lazyLoadingInit();
+})

@@ -5,6 +5,7 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "node_modules/aos/src/sass/aos";
 
 /* Abstract */
 @import 'abstract/variables';
@@ -16,9 +17,12 @@
 /* Themes */
 @import "themes/animations";
 
-/* Components */
-@import "components/button";
-
 /* Layouts */
 @import "layout/index";
 @import "layout/nav";
+
+/* Components */
+@import "components/button";
+@import "components/title_page";
+@import "components/page_container";
+@import "components/article";

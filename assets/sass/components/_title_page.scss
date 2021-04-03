@@ -1,0 +1,15 @@
+.page-title {
+  position: relative;
+  margin-bottom: 60px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 1px;
+    width: 190px;
+    background-color: $tertiary-text-color;
+    border-radius: $primary-border-radius;
+  }
+}

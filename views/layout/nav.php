@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg <?php if (is_front_page()) {  echo 'no-fill'; } ?>" id="headerNav">
     <a class="navbar-brand" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo get_home_url(); ?>">
-        <img src="<?php echo get_site_logo(); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
+        <img class="img-fluid" src="<?php echo get_site_logo(); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
     </a>
     <button class="navbar-toggler hamburger hamburger--squeeze <?php if(is_user_logged_in()) { echo 'logged'; } ?>" type="button" data-toggle="collapse" data-target="#headerNavigation"
             aria-controls="headerNavigation" aria-expanded="false" aria-label="Toggle Header Navigation">
