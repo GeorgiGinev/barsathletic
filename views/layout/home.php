@@ -34,15 +34,10 @@
 
         <div class="row">
             <?php foreach (get_posts(array('numberposts' => 3)) as $article) { ?>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="article-box" data-aos="fade-down">
-                        <h4><?php echo $article->post_title; ?></h4>
-                        <?php if(get_the_post_thumbnail_url($article, 'post-thumbnails')) { ?>
-                                asd
-                            <span><?php echo get_the_post_thumbnail_url($article); ?></span>
-                        <?php } ?>
-                    </div>
-                </div> <?php } ?>
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+                    <?php include(__DIR__.'/../components/article-listing.php');?>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </section>

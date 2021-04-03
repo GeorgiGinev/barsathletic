@@ -85,12 +85,12 @@ $(document).ready(function() {
 });
 
 // Article tilt effect
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('.article-box').tilt({
         glare: true,
         maxGlare: .5
     })
-})
+})*/
 
 // Lazy loading
 $(document).ready(function() {

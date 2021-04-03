@@ -1,48 +1,65 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
+    color: $tertiary-text-color;
 }
 
 h1 {
+    color: inherit;
     font-size: 36px;
 }
 
 h2 {
+    color: inherit;
     font-size: 36px;
 }
 
 h3 {
+    color: inherit;
     font-size: 32px;
 }
 
 h4 {
+    color: inherit;
     font-size: 28px;
 }
 
 h5 {
+    color: inherit;
     font-size: 24px;
 }
 
 h6 {
+    color: inherit;
     font-size: 21px;
 }
 
 sub {
+    color: inherit;
     font-size: 16px;
 }
 
 label {
+    color: inherit;
     font-size: 16px;
 }
 
 p {
+    color: inherit;
     font-size: inherit;
 }
 
 b {
+    color: inherit;
     font-size: inherit;
 }
 
 a {
+    color: inherit;
+    font-size: inherit;
+}
+
+i {
+    color: inherit;
     font-size: inherit;
 }
