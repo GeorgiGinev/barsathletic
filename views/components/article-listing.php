@@ -8,6 +8,11 @@
                 </div>
             </div>
         <?php } else { ?>
+            <div class="article-thumbnail">
+                <div class="thumbnail">
+                    <div class="logo"></div>
+                </div>
+            </div>
         <?php } ?>
         <h4 class="article-title"><?php echo $article->post_title; ?></h4>
         <div class="article-read-more">
