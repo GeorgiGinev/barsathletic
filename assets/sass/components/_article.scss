@@ -5,9 +5,11 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: block;
 
   .article-title {
     vertical-align: middle;
+    display: block;
     color: $secondary-text-color;
     position: absolute;
     top: 50%;
@@ -32,6 +34,7 @@
     .thumbnail {
       width: 100%;
       height: auto;
+      display: block;
       opacity: .8;
       position: relative;
 
@@ -56,6 +59,7 @@
       }
 
       .logo {
+        display: block;
         width: 92%;
         height: 75px;
         background-size: contain;
@@ -77,6 +81,7 @@
     color: $primary-text-color;
     text-transform: uppercase;
     text-align: center;
+    display: block;
     transition: transform $tertiary-transition ease-in-out;
   }
 
@@ -88,6 +93,7 @@
     transition: transform $tertiary-transition ease;
     font-weight: bold;
     z-index: 0;
+    display: block;
   }
 
   &:hover {
