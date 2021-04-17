@@ -2,7 +2,6 @@ window.Popper = require('popper.js').default;
 require('popper.js');
 require('bootstrap/dist/js/bootstrap');
 require('jquery');
-require('tilt.js/src/tilt.jquery');
 require('es6-promise').polyfill();
 var $ = require('jquery');
 import jquery from 'jquery';
@@ -83,14 +82,6 @@ $(document).ready(function() {
         }
     });
 });
-
-// Article tilt effect
-/*$(document).ready(function() {
-    $('.article-box').tilt({
-        glare: true,
-        maxGlare: .5
-    })
-})*/
 
 // Lazy loading
 $(document).ready(function() {
