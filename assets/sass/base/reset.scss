@@ -8,3 +8,21 @@ body {
 #wpadminbar {
     position: absolute;
 }
+
+.base-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-header {
+    flex-shrink: 0;
+}
+
+.main-footer {
+    flex-shrink: 0;
+}
+
+.main-body {
+    flex: 1 0 auto;
+}

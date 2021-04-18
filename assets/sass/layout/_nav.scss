@@ -1,12 +1,17 @@
+#headerNavReplacer {
+  height: 96px;
+}
+
 .navbar {
   background-color: $secondary-background-color;
   color: $primary-text-color;
   animation: $tertiary-transition smallSlideDownWithFade forwards;
   z-index: 1;
   flex-wrap: unset;
-  position: absolute;
   width: 100%;
   transition: background-color $primary-transition ease-in-out;
+  position: absolute;
+  top: 0;
 
   &.no-fill {
     background-color: transparent;

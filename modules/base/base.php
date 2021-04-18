@@ -1,4 +1,5 @@
 <?php
+include_once ('routes.php');
 
 include_once ('logo.php');
 include_once ('menus.php');

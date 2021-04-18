@@ -4,6 +4,7 @@
             var homeVideoUrl = '<?php echo get_home_video(); ?>';
         </script>
     <?php } ?>
+
     <div class="container-sm">
         <div class="content <?php if (is_user_logged_in()) {
             echo 'logged';

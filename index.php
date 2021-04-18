@@ -14,9 +14,15 @@
  * @since Twenty Nineteen 1.0
  */
 
-get_header();
-
-include_once('views/app.php');
-
-get_footer();
 ?>
+<div class="base-container">
+    <?php get_header(); ?>
+
+    <main class="main-body">
+        <?php
+            include_once('views/app.php');
+        ?>
+    </main>
+
+    <?php get_footer(); ?>
+</div>
