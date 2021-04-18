@@ -31,7 +31,9 @@
 </section>
 <section class="container-sm">
     <div class="page-container">
-        <h2 class="page-title">Latest programs</h2>
+        <div class="page-title">
+            <h2 class="main-title">Latest programs</h2>
+        </div>
 
         <div class="row">
             <?php foreach (get_posts(array('numberposts' => 3)) as $key=>$article) { ?>

@@ -1,16 +1,23 @@
 .page-title {
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    height: 1px;
-    width: 190px;
-    background-color: $tertiary-text-color;
-    border-radius: $primary-border-radius;
+  .main-title {
+    position: relative;
+    font-weight: bold;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 1px;
+      width: 190px;
+      background-color: $tertiary-text-color;
+      border-radius: $primary-border-radius;
+    }
+  }
+
+  .sub-title {
+    opacity: .6;
   }
 }

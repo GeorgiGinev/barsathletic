@@ -1,12 +1,11 @@
 .ba-btn {
   border-radius: $primary-border-radius;
   padding: 0 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   cursor: pointer;
   transition: color $primary-transition ease-in-out, background-color $primary-transition ease-in-out;
   width: max-content;
+  text-align: center;
 
   &:hover {
     text-decoration: none;
@@ -14,7 +13,8 @@
 }
 
 .ba-btn-sm {
-  height: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   margin: 12px;
 }
 
@@ -31,11 +31,39 @@
   @extend .ba-btn;
   @extend .ba-btn-sm;
 
+  border: 1px solid transparent;;
   background-color: $primary-background-color;
   color: $primary-text-color;
 
+  &.outline {
+    border-color: rgba($primary-background-color, .8);
+    background-color: $quaternary-background-color;
+    color: $primary-background-color;
+  }
+
   &:hover {
+    border-color: rgba($primary-background-color, .8);
     background-color: rgba($primary-background-color, .8);
     color: $primary-text-color;
+  }
+}
+
+/* Bootstrap buttons */
+
+.btn-outline-danger {
+  color: $primary-background-color;
+  border-color: $primary-background-color;
+
+  &:hover {
+    background-color: $primary-background-color;
+  }
+}
+
+.btn-outline-dark {
+  color: $secondary-background-color;
+  border-color: $secondary-background-color;
+
+  &:hover {
+    background-color: $secondary-background-color;
   }
 }
