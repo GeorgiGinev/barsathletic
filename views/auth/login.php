@@ -13,6 +13,11 @@
                                 <h1 class="main-title">Sign In</h1>
                                 <sub class="sub-title">Sign in to have more privileges.</sub>
                             </div>
+                            <?php if (isset($_GET['login']) && $_GET['login'] == 'failed') {?>
+                                <div class="alert alert-danger" role="alert">
+                                    The username/email or the password was wrong! Please try again.
+                                </div>
+                            <?php } ?>
                             <form name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>" method="post">
                                 <div class="form-group">
                                     <label for="loginName">Name</label>
