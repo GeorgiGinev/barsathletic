@@ -27,7 +27,11 @@
             <span class="text-uppercase font-weight-medium">Author:</span>
             <span class="font-weight-medium"><?php echo get_the_author_meta('display_name', $article->post_author); ?></span>
         </div>
-        <div class="col-12 col-sm-4 col-md-6 col-lg-8 my-1">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-1">
+            <span class="text-uppercase font-weight-medium">Date:</span>
+            <span class="font-weight-medium"><?php echo date('d.m.Y', strtotime($article->post_date)); ?></span>
+        </div>
+        <div class="col-12 col-sm-4 col-md-3 col-lg-6 my-1">
             <span class="text-uppercase font-weight-medium">Tags:</span>
             <?php if (!empty(get_the_tags($article))) { ?>
                 <?php foreach (get_the_tags($article->ID) as $tag) { ?>
