@@ -25,4 +25,4 @@
             <span class="d-inline-block ml-1">By <?php echo get_the_author_meta('nickname', $article->post_author); ?></span>
         </span>
     </a>
-<?php }
+<?php } ?>

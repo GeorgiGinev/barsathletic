@@ -1,6 +1,8 @@
 <?php $article = get_post(get_the_ID()); ?>
 <section class="container-sm">
     <header class="my-3 page-title">
+        <?php if (function_exists('the_breadcrumb')) the_breadcrumb(); ?>
+
         <h1 class="main-title">
             <?php echo get_the_title(); ?>
         </h1>
@@ -11,7 +13,7 @@
             <img class="img-fluid" src="<?php echo $image[0]; ?>" alt="<?php echo $article->post_title; ?>"/>
         </div>
     <?php } ?>
-    <div class="my-3 row">
+    <div class="row my-3">
         <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-1">
             <span class="text-uppercase font-weight-medium">Share:</span>
             <sub class="mr-1"><a href="" title="Share <?php echo $article->post_title ?> on Facebook"><i
@@ -26,10 +28,11 @@
             <span class="font-weight-medium"><?php echo get_the_author_meta('display_name', $article->post_author); ?></span>
         </div>
         <div class="col-12 col-sm-4 col-md-6 col-lg-8 my-1">
-            <span class="text-uppercase font-weight-medium">Categories:</span>
+            <span class="text-uppercase font-weight-medium">Tags:</span>
             <?php if (!empty(get_the_tags($article))) { ?>
                 <?php foreach (get_the_tags($article->ID) as $tag) { ?>
-                    <a class="mr-1 tag" title="<?php echo $tag->name; ?>" href="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></a>
+                    <a class="mr-1 tag" title="<?php echo $tag->name; ?>"
+                       href="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></a>
                 <?php } ?>
             <?php } ?>
         </div>

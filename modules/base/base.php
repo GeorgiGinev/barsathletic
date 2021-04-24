@@ -8,3 +8,4 @@ include_once ('image_sizes.php');
 include_once ('login.php');
 include_once ('register.php');
 include_once ('breadcrumps.php');
+include_once ('bs_pagination.php');

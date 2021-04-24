@@ -1,3 +1,6 @@
+/* Abstract */
+@import 'abstract/variables';
+
 /* Vendors */
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
@@ -6,9 +9,7 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
 @import "node_modules/aos/src/sass/aos";
-
-/* Abstract */
-@import 'abstract/variables';
+@import "vendors/bootstrap/pagination";
 
 /* Base */
 @import 'base/reset';
