@@ -1,5 +1,9 @@
 #headerNavReplacer {
   height: 96px;
+
+  @media(max-width: 992px) {
+    height: 70px;
+  }
 }
 
 .navbar {
@@ -12,6 +16,14 @@
   transition: background-color $primary-transition ease-in-out;
   position: absolute;
   top: 0;
+
+  &.logged {
+    top: 32px;
+
+    @media(max-width: 781px) {
+      top: 46px;
+    }
+  }
 
   &.no-fill {
     background-color: transparent;

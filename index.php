@@ -15,12 +15,10 @@
  */
 
 ?>
-<div class="base-container">
-    <?php get_header(); ?>
+<?php get_header(); ?>
 
     <main class="main-body">
         <h1>Index</h1>
     </main>
 
-    <?php get_footer(); ?>
-</div>
+<?php get_footer(); ?>

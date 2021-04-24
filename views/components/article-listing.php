@@ -17,7 +17,7 @@
         <?php } ?>
         <h4 class="article-title"><?php echo $article->post_title; ?></h4>
         <span class="article-read-more">
-            <h6>Read more</h6>
+            <span>Read more</span>
             <i class="fas fa-arrow-circle-up"></i>
         </span>
         <span class="article-author">

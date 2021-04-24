@@ -2,7 +2,7 @@
 
 <main class="main-body">
     <?php
-    include_once('views/layout/page.php');
+    include_once('views/layout/article.php');
     ?>
 </main>
 

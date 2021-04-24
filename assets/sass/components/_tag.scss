@@ -1,0 +1,15 @@
+.tag {
+  border: 1px solid $primary-border-color;
+  border-radius: $secondary-border-radius;
+  display: inline-block;
+  transition: border $primary-transition ease;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 12px;
+
+  &:hover {
+    border: 1px solid rgba($secondary-border-color, .4);
+    text-decoration: none;
+  }
+}

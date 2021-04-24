@@ -1,7 +1,7 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    color: $tertiary-text-color;
+    color: $quaternary-text-color;
 }
 
 h1 {
@@ -65,4 +65,8 @@ a {
 i {
     color: inherit;
     font-size: inherit;
+}
+
+.font-weight-medium {
+    font-weight: 500;
 }
