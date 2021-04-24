@@ -1,9 +1,4 @@
 <?php
-/**
- * Template Name: Category Temeplate
- *
- */
-
 get_header(); ?>
 
     <main class="main-body">

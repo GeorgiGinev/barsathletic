@@ -1,6 +1,6 @@
 <header class="main-header">
     <div id="headerNavReplacer"></div>
-    <nav class="navbar navbar-expand-lg <?php if (is_home()) {  echo 'no-fill'; } ?>
+    <nav class="navbar navbar-expand-lg <?php if (is_front_page()) {  echo 'no-fill'; } ?>
     <?php if (is_user_logged_in()) { ?> logged <?php }?>" id="headerNav">
         <a class="navbar-brand" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo get_home_url(); ?>">
             <img class="img-fluid" src="<?php echo get_site_logo(); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>

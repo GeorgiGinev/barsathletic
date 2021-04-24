@@ -5,19 +5,20 @@
 
 function the_breadcrumb()
 {
-    $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+    $showOnHome = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
     $delimiter = '-'; // delimiter between crumbs
     $home = 'Home'; // text for the 'Home' link
+    $blog = 'Blog';
     $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
     $before = '<span class="current">'; // tag before the current crumb
     $after = '</span>'; // tag after the current crumb
 
     global $post;
     $homeLink = get_bloginfo('url');
-    if (is_home() || is_front_page()) {
-        if ($showOnHome == 1) {
-            echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a></div>';
-        }
+    if (is_front_page() && $showOnHome == 1) {
+        echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a></div>';
+    } else if (is_home() && $showOnHome == 1) {
+        echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> '.$delimiter.' '.$blog.'</div>';
     } else {
         echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
         if (is_category()) {
@@ -74,17 +75,17 @@ function the_breadcrumb()
                 echo $before . get_the_title() . $after;
             }
         } elseif (is_page() && $post->post_parent) {
-            $parent_id  = $post->post_parent;
+            $parent_id = $post->post_parent;
             $breadcrumbs = array();
             while ($parent_id) {
                 $page = get_page($parent_id);
                 $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
-                $parent_id  = $page->post_parent;
+                $parent_id = $page->post_parent;
             }
             $breadcrumbs = array_reverse($breadcrumbs);
             for ($i = 0; $i < count($breadcrumbs); $i++) {
                 echo $breadcrumbs[$i];
-                if ($i != count($breadcrumbs)-1) {
+                if ($i != count($breadcrumbs) - 1) {
                     echo ' ' . $delimiter . ' ';
                 }
             }
