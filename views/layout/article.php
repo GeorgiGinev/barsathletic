@@ -6,6 +6,8 @@
         <h1 class="main-title">
             <?php echo get_the_title(); ?>
         </h1>
+        <?php $page_for_posts = get_post(get_option( 'page_for_posts' )); ?>
+        <?php var_dump($page_for_posts); ?>
     </header>
     <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($article->ID), 'main-thumbnail'); ?>
     <?php if (!empty($image)) { ?>
