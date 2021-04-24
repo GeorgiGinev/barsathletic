@@ -19,9 +19,7 @@
     <?php get_header(); ?>
 
     <main class="main-body">
-        <?php
-            include_once('views/app.php');
-        ?>
+        <h1>Index</h1>
     </main>
 
     <?php get_footer(); ?>

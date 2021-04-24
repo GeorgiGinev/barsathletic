@@ -9,5 +9,9 @@
             return 'login.php';
         }
 
+        if($type == 'register') {
+            return 'register.php';
+        }
+
         return;
     }

@@ -39,14 +39,15 @@ add_action('wp_login_failed', 'front_end_login_fail');
 function front_end_login_fail($username)
 {
     $login_page = home_url('/' . getRoute('login'));
-// Getting URL of the login page
-    $referrer = $_SERVER['HTTP_REFERER'];
-// if there's a valid referrer, and it's not the default log-in screen
-    if (!empty($referrer) && !strstr($referrer, 'wp-login') && !strstr($referrer, 'wp-admin')) {
-        wp_redirect($login_page . "?login=failed");
-        exit;
+    // Getting URL of the login page
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $referrer = $_SERVER['HTTP_REFERER'];
+        // if there's a valid referrer, and it's not the default log-in screen
+        if (!empty($referrer) && !strstr($referrer, 'wp-login') && !strstr($referrer, 'wp-admin')) {
+            wp_redirect($login_page . "?login=failed");
+            exit;
+        }
     }
-
 }
 
 /**
@@ -57,16 +58,16 @@ add_action('authenticate', 'check_username_password', 1, 3);
 function check_username_password($login, $username, $password)
 {
     $login_page = home_url('/' . getRoute('login'));
-// Getting URL of the login page
-    $referrer = $_SERVER['HTTP_REFERER'];
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        // Getting URL of the login page
+        $referrer = $_SERVER['HTTP_REFERER'];
 
-// if there's a valid referrer, and it's not the default log-in screen
-    if (!empty($referrer) && !strstr($referrer, 'wp-login') && !strstr($referrer, 'wp-admin')) {
-        if ($username == "" || $password == "") {
-            wp_redirect($login_page . "?login=empty");
-            exit;
+        // if there's a valid referrer, and it's not the default log-in screen
+        if (!empty($referrer) && !strstr($referrer, 'wp-login') && !strstr($referrer, 'wp-admin')) {
+            if ($username == "" || $password == "") {
+                wp_redirect($login_page . "?login=empty");
+                exit;
+            }
         }
     }
-
 }
-// Replace my constant 'LOGIN_PAGE_ID' with your custom login page id.
