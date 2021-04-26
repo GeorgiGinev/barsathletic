@@ -60,6 +60,12 @@ b {
 a {
     color: inherit;
     font-size: inherit;
+    transition: color $primary-transition ease;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba($primary-background-color, .8) !important;
+    }
 }
 
 i {

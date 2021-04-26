@@ -16,12 +16,31 @@
     <div class="row my-3">
         <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-1">
             <span class="text-uppercase font-weight-medium">Share:</span>
-            <sub class="mr-1"><a href="" title="Share <?php echo $article->post_title ?> on Facebook"><i
-                            class="fab fa-facebook-f"></i></a></sub>
-            <sub class="mr-1"><a href="" title="Share <?php echo $article->post_title ?> on Pinterest"><i
-                            class="fab fa-pinterest-p"></i></a></sub>
-            <sub class="mr-1"><a href="" title="Share <?php echo $article->post_title ?> on Twitter"><i
-                            class="fab fa-twitter"></i></a></sub>
+            <sub class="mr-1">
+                <a data-sharer="facebook"
+                   data-title="<?php echo $article->post_title ?>"
+                   data-url="<?php echo get_permalink($article->ID); ?>"
+                   title="<?php echo $article->post_title ?>">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </sub>
+            <sub class="mr-1">
+                <a data-sharer="pinterest"
+                   data-title="<?php echo $article->post_title ?>"
+                   data-url="<?php echo get_permalink($article->ID); ?>"
+                   title="<?php echo $article->post_title ?>">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </sub>
+            <sub class="mr-1">
+                <a data-sharer="twitter"
+                   data-title="<?php echo $article->post_title ?>"
+                   data-hashtags="workout"
+                   data-url="<?php echo get_permalink($article->ID); ?>"
+                   title="<?php echo $article->post_title ?>">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </sub>
         </div>
         <div class="col-6 col-sm-4 col-md-3 col-lg-2 my-1">
             <span class="text-uppercase font-weight-medium">Author:</span>
@@ -33,12 +52,15 @@
         </div>
         <div class="col-12 col-sm-4 col-md-3 col-lg-6 my-1">
             <span class="text-uppercase font-weight-medium">Tags:</span>
-            <?php if (!empty(get_the_tags($article))) { ?>
-                <?php foreach (get_the_tags($article->ID) as $tag) { ?>
-                    <a class="mr-1 tag" title="<?php echo $tag->name; ?>"
-                       href="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></a>
+            <form action="<?php echo get_permalink(get_option('page_for_posts')); ?>" method="GET"
+                  class="d-inline-block">
+                <?php if (!empty(get_the_tags($article))) { ?>
+                    <?php foreach (get_the_tags($article->ID) as $tag) { ?>
+                        <button type="submit" class="mr-1 tag" name="tag"
+                                value="<?php echo $tag->name ?>"><?php echo $tag->name; ?></button>
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
+            </form>
         </div>
     </div>
     <div class="page-content">

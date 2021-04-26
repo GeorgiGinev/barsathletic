@@ -2,6 +2,7 @@ window.Popper = require('popper.js').default;
 require('popper.js');
 require('bootstrap/dist/js/bootstrap');
 require('jquery');
+require('sharer.js/sharer');
 require('es6-promise').polyfill();
 var $ = require('jquery');
 import jquery from 'jquery';

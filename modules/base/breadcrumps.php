@@ -6,7 +6,7 @@
 function the_breadcrumb()
 {
     $showOnHome = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
-    $delimiter = '-'; // delimiter between crumbs
+    $delimiter = '/'; // delimiter between crumbs
     $home = 'Home'; // text for the 'Home' link
     $blog = 'Blog';
     $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
@@ -18,7 +18,7 @@ function the_breadcrumb()
     if (is_front_page() && $showOnHome == 1) {
         echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a></div>';
     } else if (is_home() && $showOnHome == 1) {
-        echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> '.$delimiter.' '.$blog.'</div>';
+        echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> '.$delimiter.' '.$before.$blog.$after.'</div>';
     } else {
         echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
         if (is_category()) {

@@ -16,6 +16,7 @@
             'order' => 'desc',
             'post_type' => 'post',
             'post_status' => 'publish',
+            'tag' => isset($_GET['tag']) ? $_GET['tag'] : null,
         )
     );
 

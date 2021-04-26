@@ -7,6 +7,7 @@
   text-align: center;
   text-transform: uppercase;
   padding: 0 12px;
+  background-color: $quaternary-background-color;
 
   &:hover {
     border: 1px solid rgba($secondary-border-color, .4);

@@ -26,7 +26,7 @@
                     <?php if (is_user_logged_in()) { ?>
                         <a href="<?php echo getRoute('login'); ?>" class="ba-btn-primary">My Profile</a>
                     <?php } else { ?>
-                        <a class="ba-btn-primary">Sign Up</a>
+                        <a class="ba-btn-primary mr-2">Sign Up</a>
                         <a href="<?php echo wp_login_url(); ?>" class="ba-btn-primary">Sign In</a>
                     <?php } ?>
                 </div>
