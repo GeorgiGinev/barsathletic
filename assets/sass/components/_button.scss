@@ -1,10 +1,9 @@
 .ba-btn {
   border-radius: $primary-border-radius;
   padding: 0 16px;
-  display: block;
+  display: inline-block;
   cursor: pointer;
   transition: color $primary-transition ease-in-out, background-color $primary-transition ease-in-out;
-  width: max-content;
   text-align: center;
 
   &:hover {

@@ -13,7 +13,8 @@
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="form-group">
                         <label for="first_name">First Name<span class="text-danger">*</span></label>
-                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First name" required>
+                        <input type="text" id="first_name" name="first_name" class="form-control"
+                               placeholder="First name" required>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
@@ -32,6 +33,11 @@
                     <div class="form-group">
                         <label for="message">Message<span class="text-danger">*</span></label>
                         <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-2 offset-sm-8 offset-md-10">
+                    <div class="form-group">
+                        <button class="ba-btn-primary w-100" type="submit">Submit</button>
                     </div>
                 </div>
             </div>
