@@ -3,6 +3,8 @@ require('popper.js');
 require('bootstrap/dist/js/bootstrap');
 require('jquery');
 require('sharer.js/sharer');
+require('toastr/toastr');
+import {toastrInit} from './contact';
 require('es6-promise').polyfill();
 var $ = require('jquery');
 import jquery from 'jquery';
@@ -87,4 +89,9 @@ $(document).ready(function() {
 // Lazy loading
 $(document).ready(function() {
     lazyLoadingInit();
-})
+});
+
+// Toastr
+$(document).ready(function() {
+    toastrInit();
+});

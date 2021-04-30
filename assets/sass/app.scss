@@ -9,6 +9,7 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
 @import "node_modules/aos/src/sass/aos";
+@import "~toastr/toastr";
 @import "vendors/bootstrap/pagination";
 
 /* Base */
@@ -32,3 +33,4 @@
 @import "components/article";
 @import "components/tag";
 @import "components/breadcrumbs";
+@import "components/ajax_loader";
