@@ -66,4 +66,21 @@
     <div class="page-content">
         <?php echo the_content(); ?>
     </div>
+    <section class="page-container">
+        <header><h2 class="mb-3">Similar articles</h2></header>
+        <?php
+        $related = get_posts(array('category__in' => wp_get_post_categories($article->ID), 'numberposts' => 3, 'post__not_in' => array($article->ID)));
+        if ($related) { ?>
+            <div class="row">
+                <?php foreach ($related as $post) {
+                    setup_postdata($post); ?>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <?php $article = $post; ?>
+                        <?php include(__DIR__ . '/../components/article-listing.php'); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php }
+        wp_reset_postdata(); ?>
+    </section>
 </section>
