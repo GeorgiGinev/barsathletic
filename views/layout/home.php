@@ -36,11 +36,12 @@
         </div>
 
         <div class="row">
-            <?php foreach (get_posts(array('numberposts' => 3)) as $key=>$article) { ?>
+            <?php foreach (get_posts(
+                    array('numberposts' => 3,
+                          'category' => get_category_by_slug('programs')->cat_ID
+                    )) as $key=>$article) { ?>
                 <div class="col-12 col-md-6 col-lg-4"
-                    <?php if($key == 0) { ?> data-aos="fade-in" <?php } ?>
-                    <?php if($key == 1) { ?> data-aos="fade-in" <?php } ?>
-                    <?php if($key == 2) { ?> data-aos="fade-in" <?php } ?>
+                    <?php if($key == 0 || $key == 1 || $key == 2) { ?> data-aos="fade-in" <?php } ?>
                 >
                     <?php include(__DIR__.'/../components/article-listing.php');?>
                 </div>

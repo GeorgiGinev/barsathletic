@@ -97,6 +97,20 @@
     display: block;
   }
 
+  .article-tag-box {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    display: block;
+    color: $tertiary-text-color;
+    font-weight: bold;
+
+    .article-tag {
+      padding: 2px 6px;
+      background-color: $tertiary-border-color;
+    }
+  }
+
   &:hover {
     .article-thumbnail {
       opacity: .4;

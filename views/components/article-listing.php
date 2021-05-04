@@ -16,6 +16,14 @@
             </span>
         <?php } ?>
         <h4 class="article-title"><?php echo $article->post_title; ?></h4>
+
+        <?php if (!empty(get_the_tags($article->ID))) { ?>
+            <span class="article-tag-box">
+            <?php foreach (get_the_tags($article->ID) as $tag) { ?>
+                <span class="article-tag"><?php echo $tag->name; ?></span>
+            <?php } ?>
+        </span>
+        <?php } ?>
         <span class="article-read-more">
             <span>Read more</span>
             <i class="fas fa-arrow-circle-up"></i>
