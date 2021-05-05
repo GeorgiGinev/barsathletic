@@ -3,12 +3,16 @@
 
   .content {
     min-height: 545px;
-    height: 100vh;
+    height: calc(100vh - 92px);
     animation: $tertiary-transition fadeIn forwards;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px 0;
+
+    @media(max-width: 992px) {
+      height: calc(100vh - 102px);
+    }
 
     &.logged {
       height: calc(100vh - 128px);
