@@ -5,13 +5,15 @@
  * @return string|void string or none for route link
  */
     function getRoute($type) {
-        if($type == 'login') {
-            return 'login.php';
+        switch ($type) {
+            case 'login': {
+                return 'login.php';
+            }
+            case 'register': {
+                return 'register.php';
+            }
+            default: {
+                return;
+            }
         }
-
-        if($type == 'register') {
-            return 'register.php';
-        }
-
-        return;
     }

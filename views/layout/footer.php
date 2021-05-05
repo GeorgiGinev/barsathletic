@@ -1,10 +1,18 @@
+<?php if (is_active_sidebar('newsletter-area')) { ?>
+    <section class="newsletter">
+        <div class="container-sm">
+            <?php dynamic_sidebar( 'newsletter-area' ); ?>
+        </div>
+    </section>
+<?php } ?>
 <footer class="main-footer">
     <div class="container-sm">
         <div class="top-footer">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="text-center">
-                        <img class="img-fluid" src="<?php echo get_site_logo(); ?>" alt="<?php echo get_bloginfo('name'); ?>"/>
+                        <img class="img-fluid" src="<?php echo get_site_logo(); ?>"
+                             alt="<?php echo get_bloginfo('name'); ?>"/>
                     </div>
                 </div>
                 <div class="col-lg-9">
