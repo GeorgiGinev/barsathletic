@@ -1,54 +1,177 @@
 .auth {
-  .um-field {
-    @extend .form-group;
-
-    padding: 0;
-
-    .um-field-label {
-      margin: 0;
+  #loginform {
+    p {
+      @extend .form-group;
 
       label {
-        color: $tertiary-text-color;
         font-weight: normal;
       }
-    }
-  }
 
-  .um-form {
-    .um-field-area {
-      input {
+      input[type=text], input[type=password] {
         @extend .form-control;
+
+        max-width: 100%;
+      }
+
+      &.login-submit {
+        input {
+          @extend .ba-btn-primary;
+        }
       }
     }
   }
 
-  #um-submit-btn {
-    @extend .ba-btn-primary;
+  #pmpro_levels_table {
+    width: 100%;
 
-    display: block;
-  }
+    .pmpro_btn {
+      border: 1px solid transparent;;
+      background-color: $primary-background-color;
+      color: $primary-text-color;
+      font-weight: normal;
+      transition: color $primary-transition ease-in-out, background-color $primary-transition ease-in-out;
 
-  .um-col-alt {
-    .um-right {
-      .um-button {
-        @extend .btn;
-        @extend .btn-outline-dark;
-
-        box-shadow: none;
-        display: block;
-        border: 1px solid $tertiary-text-color !important;
+      &:hover {
+        border-color: rgba($primary-background-color, .8);
+        background-color: rgba($primary-background-color, .8);
+        color: $primary-text-color;
       }
     }
   }
 
-  .um {
-    .um-field-checkbox {
-      &.active {
-        &:not(.um-field-radio-state-disabled) {
-          i {
-            color: $quinary-text-color;
+  #pmpro_form {
+    #pmpro_user_fields {
+      h3 {
+        margin-bottom: 12px;
+
+        span {
+          display: block;
+          margin: 0;
+        }
+      }
+      .pmpro_checkout-fields {
+        .pmpro_checkout-field {
+          @extend .form-group;
+
+          label {
+            font-weight: normal;
+          }
+
+          input {
+            @extend .form-control;
+
+            max-width: 100%;
+          }
+
+          span {
+            display: none;
           }
         }
+      }
+    }
+  }
+
+  #pmpro_billing_address_fields {
+    .pmpro_checkout-fields {
+      .pmpro_checkout-field {
+        @extend .form-group;
+
+        label {
+          font-weight: normal;
+        }
+
+        input, select {
+          @extend .form-control;
+
+          max-width: 100%;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #pmpro_payment_information_fields {
+    h3 {
+      margin-bottom: 12px;
+
+      span {
+        display: block;
+        margin: 0;
+      }
+    }
+
+    .pmpro_checkout-fields {
+      .pmpro_checkout-field {
+        @extend .form-group;
+
+        input {
+          @extend .form-control;
+          max-width: 100%;
+        }
+
+        label {
+          font-weight: normal;
+        }
+
+        span {
+          display: none;
+        }
+
+        &.pmpro_payment-expiration {
+          select {
+            @extend .form-control;
+
+            display: inline-block;
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+
+  .pmpro_submit {
+    input[type=submit] {
+      @extend .ba-btn-primary;
+    }
+  }
+
+  #lostpasswordform {
+    .pmpro_lost_password-field {
+      @extend .form-group;
+
+      label {
+        font-weight: normal;
+      }
+
+      input {
+        @extend .form-control;
+
+        max-width: 100%;
+      }
+    }
+
+    .pmpro_submit {
+      input {
+        @extend .ba-btn-primary;
+      }
+    }
+  }
+
+  #member-profile-edit {
+    .pmpro_member_profile_edit-field {
+      @extend .form-group;
+
+      input {
+        @extend .form-control;
+
+        max-width: 100%;
+      }
+
+      label {
+        font-weight: normal;
       }
     }
   }

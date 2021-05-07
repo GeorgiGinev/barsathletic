@@ -10,7 +10,7 @@
                 return 'login';
             }
             case 'register': {
-                return 'register';
+                return 'membership-account/membership-levels/';
             }
             case 'profile': {
                 return 'profile';

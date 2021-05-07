@@ -3,6 +3,7 @@
 
     <main class="main-body">
         <section class="container-sm">
+            <?php if (function_exists('the_breadcrumb')) the_breadcrumb(); ?>
             <div class="row">
                 <div class="col-12 col-md-6 offset-md-3">
                     <div class="card my-4">
