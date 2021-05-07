@@ -7,10 +7,16 @@
     function getRoute($type) {
         switch ($type) {
             case 'login': {
-                return 'login.php';
+                return 'login';
             }
             case 'register': {
-                return 'register.php';
+                return 'register';
+            }
+            case 'profile': {
+                return 'profile';
+            }
+            case 'logout': {
+                return 'logout';
             }
             default: {
                 return;

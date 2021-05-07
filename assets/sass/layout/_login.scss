@@ -1,73 +1,54 @@
-#login {
-  width: 100%;
-  padding-top: 0;
+.auth {
+  .um-field {
+    @extend .form-group;
 
-  h1 {
-    display: none;
-  }
+    padding: 0;
 
-  #backtoblog {
-    display: none;
-  }
+    .um-field-label {
+      margin: 0;
 
-  #loginform {
-    #user_login {
-      @extend .form-control;
-    }
-
-    p {
-      @extend .form-group;
-    }
-
-    .user-pass-wrap {
-      @extend .form-group;
-
-      .wp-pwd {
-        position: relative;
-        margin: 0;
-
-        #user_pass {
-          @extend .form-control;
-
-          padding-right: 40px;
-        }
-
-        .wp-hide-pw {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 2px;
-          background-color: transparent;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: none;
-          width: 34px;
-          height: 34px;
-          transition: background-color $primary-transition ease;
-
-          .dashicons {
-            position: unset;
-          }
-
-          &:active {
-            background-color: darken($primary-text-color, 5);
-          }
-        }
-      }
-    }
-
-    .forgetmenot {
       label {
-        margin: 0;
+        color: $tertiary-text-color;
+        font-weight: normal;
       }
     }
+  }
 
-    .submit {
-      #wp-submit {
+  .um-form {
+    .um-field-area {
+      input {
+        @extend .form-control;
+      }
+    }
+  }
+
+  #um-submit-btn {
+    @extend .ba-btn-primary;
+
+    display: block;
+  }
+
+  .um-col-alt {
+    .um-right {
+      .um-button {
         @extend .btn;
         @extend .btn-outline-dark;
+
+        box-shadow: none;
+        display: block;
+        border: 1px solid $tertiary-text-color !important;
+      }
+    }
+  }
+
+  .um {
+    .um-field-checkbox {
+      &.active {
+        &:not(.um-field-radio-state-disabled) {
+          i {
+            color: $quinary-text-color;
+          }
+        }
       }
     }
   }

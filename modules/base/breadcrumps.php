@@ -58,7 +58,7 @@ function the_breadcrumb()
                     echo $before . get_the_title() . $after;
                 }
             }
-        } else if ($GLOBALS['pagenow'] === 'wp-login.php') {
+        } else if ($GLOBALS['pagenow'] === 'wp-auth.php') {
             echo $before.'Login';
         } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
             $post_type = get_post_type_object(get_post_type());

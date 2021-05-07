@@ -1,0 +1,45 @@
+.page-content {
+  .um {
+    .um-field-label {
+      margin: 0;
+
+      label {
+        color: $tertiary-text-color;
+        font-weight: normal;
+      }
+    }
+
+    .um-account-link {
+      &.current {
+        .um-account-icon {
+          i {
+            color: $quinary-text-color;
+          }
+        }
+      }
+    }
+
+    .um-form {
+      input, select {
+        @extend .form-control;
+
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .um-col-alt {
+      .um-left {
+        .um-button {
+          @extend .ba-btn-primary;
+
+          color: $primary-text-color !important;
+        }
+      }
+    }
+  }
+
+  .um-request-button {
+    @extend .ba-btn-primary;
+  }
+}
