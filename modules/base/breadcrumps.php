@@ -18,7 +18,7 @@ function the_breadcrumb()
     if (is_front_page() && $showOnHome == 1) {
         echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a></div>';
     } else if (is_home() && $showOnHome == 1) {
-        echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> '.$delimiter.' '.$before.$blog.$after.'</div>';
+        echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ' . $before . $blog . $after . '</div>';
     } else {
         echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
         if (is_category()) {
@@ -58,6 +58,8 @@ function the_breadcrumb()
                     echo $before . get_the_title() . $after;
                 }
             }
+        } else if ($GLOBALS['pagenow'] === 'wp-login.php') {
+            echo $before.'Login';
         } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
             $post_type = get_post_type_object(get_post_type());
             echo $before . $post_type->labels->singular_name . $after;
