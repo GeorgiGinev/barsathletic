@@ -13,10 +13,10 @@
                 return 'membership-account/membership-levels/';
             }
             case 'profile': {
-                return 'profile';
+                return 'membership-account/';
             }
             case 'logout': {
-                return 'logout';
+                return wp_logout_url(getRoute('login'));
             }
             default: {
                 return;

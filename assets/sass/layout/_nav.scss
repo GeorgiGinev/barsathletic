@@ -190,6 +190,12 @@
       position: fixed;
       padding: 0.5rem;
 
+      &.collapsing {
+        height: 100vh;
+        display: flex !important;
+        flex-direction: column;
+      }
+
       &.show {
         display: flex !important;
         flex-direction: column;

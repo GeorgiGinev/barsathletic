@@ -25,7 +25,7 @@
                 <div class="d-flex align-items-center">
                     <?php if (is_user_logged_in()) { ?>
                         <a href="/<?php echo getRoute('profile'); ?>" class="ba-btn-primary mr-2">My Profile</a>
-                        <a href="/<?php echo getRoute('logout'); ?>" class="ba-btn-primary">Logout</a>
+                        <a href="<?php echo getRoute('logout'); ?>" class="ba-btn-primary">Logout</a>
                     <?php } else { ?>
                         <a href="/<?php echo getRoute('register'); ?>" class="ba-btn-primary mr-2">Sign Up</a>
                         <a href="/<?php echo getRoute('login'); ?>" class="ba-btn-primary">Sign In</a>
