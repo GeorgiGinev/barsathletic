@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /* Template Name: Shop */ get_header(); ?>
 
 <main class="main-body">
     <?php
