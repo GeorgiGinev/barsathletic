@@ -15,7 +15,7 @@
   "author": "GeorgiGinev",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "es6-promise": "^4.2.8",
@@ -26,13 +26,13 @@
     "toastr": "^2.1.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.18",
+    "laravel-mix": "^6.0.27",
     "node-sass": "^5.0.0",
-    "postcss": "^8.2.13",
-    "resolve-url-loader": "^3.1.2",
-    "sass": "^1.32.12",
-    "sass-loader": "^10.1.1"
+    "postcss": "^8.3.6",
+    "resolve-url-loader": "^3.1.4",
+    "sass": "^1.37.5",
+    "sass-loader": "^10.2.0"
   }
 }
