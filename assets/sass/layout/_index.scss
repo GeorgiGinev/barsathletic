@@ -163,6 +163,7 @@
   top: 0;
   left: 0;
   display: flex;
+  justify-content: center;
   background-color: $secondary-background-color;
   position: absolute;
   animation: $secondary-transition fadeIn forwards;
@@ -177,7 +178,7 @@
     content: '';
     position: absolute;
     min-height: 575px;
-    height: 100vh;
+    height: 100%;
     width: 50%;
     left: 0;
     top: 0;
@@ -189,7 +190,7 @@
     content: '';
     position: absolute;
     min-height: 575px;
-    height: 100vh;
+    height: 100%;
     width: 50%;
     right: 0;
     top: 0;
